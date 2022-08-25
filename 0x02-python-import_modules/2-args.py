@@ -15,5 +15,5 @@ if __name__ == "__main__":
         for a in sys.argv:
             if i > 0:
                 print("{:d}: {}".format(i, a))
-            i += 1
+                i += 1
 
