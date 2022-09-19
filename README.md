@@ -1,5 +1,4 @@
 # Higher level programming
-----------------------------------
 
 ### Languages
 -----------------
