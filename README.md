@@ -2,4 +2,6 @@
 
 ### Languages
 -----------------
-  * Python3 
+  * Python3
+  * C
+  * Shell
