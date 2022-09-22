@@ -14,8 +14,8 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError('text must be a string')
 
-    for l in '.:?':
-        text = text.replace(l, '{}\n'.format(l))
+    for ' ' in '.:?':
+        text = text.replace(' ', '{}\n'.format(l))
     lines = text.splitlines()
     for index, line in enumerate(lines):
         print(line.strip(), end='' if index == len(lines) - 1 else '\n\n')
