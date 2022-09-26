@@ -1,27 +1,29 @@
 #!/usr/bin/python3
-"""
-    Implementing a Geometry class
+"""Module 7-base_geometry
+This Module contains a definition for BaseGeometry Class
 """
 
 
 class BaseGeometry:
+    """A class that is parent of all geometries"""
+
     def area(self):
-        """
-            Calculating the area
+        """calculates the area of the geometry
+        Raises:
+            Exception: Not implemented error
         """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """
-            Validating the integer
+        """validates an int variable
         Args:
-            name (str): The name of the parameter.
-            value (int): The parameter to validate.
+            name (str): name of the variable
+            value (any): expected value
         Raises:
-            TypeError: If value is not an integer.
-            ValueError: If value is <= 0.
+            TypeError: if value is not int
+            ValueError: if value is less than or equal to 0
         """
-        if type(value) != int:
-            raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
+        if type(value) is not int:
+            raise TypeError(f"{name} must be an integer")
+        elif value <= 0:
+            raise ValueError(f"{name} must be greater than 0")
