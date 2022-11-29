@@ -1,11 +1,15 @@
 #!/usr/bin/node
-const dict = require('./101-data.js').dict;
-let newDict = {};
-for (let key in dict) {
-  if (newDict[dict[key]] === undefined) {
-    newDict[dict[key]] = [key];
-  } else {
-    newDict[dict[key]].push(key);
+const dict = require('./101-data').dict;
+
+function summarizeByValues (objDict) {
+  const entries = Object.entries(objDict);
+  const newDict = {};
+  for (const entry of entries) {
+    newDict[entry[1]] = entries
+      .filter((value) => value[1] === entry[1])
+      .map((value) => value[0]);
   }
+  return newDict;
 }
-console.log(newDict);
+
+console.log(summarizeByValues(dict));;
