@@ -1,11 +1,18 @@
 #!/usr/bin/node
 class Rectangle {
-  constructor (W, H) {
-    if (W > 0 && H > 0) { [this.width, this.height] = [W, H]; }
+  constructor (w, h) {
+    if (w > 0 && h > 0) {
+      this.width = w;
+      this.height = h;
+    }
   }
 
   print () {
-    for (let i = 0; i < this.height; i++) console.log('X'.repeat(this.width));
+    console.log(this.toString('X'));
+  }
+
+  toString (ch) {
+    return ch.repeat(this.width).concat('\n').repeat(this.height).trimEnd('\n');
   }
 
   rotate () {
@@ -13,7 +20,7 @@ class Rectangle {
   }
 
   double () {
-  [this.width, this.height] = [this.width * 2, this.height * 2];
+    [this.width, this.height] = [this.width * 2, this.height * 2];
   }
 }
 
