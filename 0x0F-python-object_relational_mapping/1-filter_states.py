@@ -8,6 +8,7 @@ Usage: ./1-filter_states.py <mysql username> \
 from sys import argv
 import MySQLdb
 
+
 def list_all_states_filtered(username, password, db_name):
     """lists all states with a name that starts with N from a database
     Args:
