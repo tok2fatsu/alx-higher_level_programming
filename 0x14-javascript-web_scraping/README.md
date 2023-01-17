@@ -1,3 +1,3 @@
 ### JavaScript - Web scraping
-###3 Languages used
+#### Languages used
 * `JavaScript`
